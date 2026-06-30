@@ -23,7 +23,7 @@ class Book:
 
     def update_price(self, price):
         self.price = price 
-        print(f"price updated now availaable for {self.price}")
+        print(f"price updated now available for {self.price}")
 
     def check_availability(self):
         if self.available_copies > 1:
