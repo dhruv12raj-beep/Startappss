@@ -8,12 +8,20 @@ class Car:
             self.__speed = speed
         
 
+    def accelerate(self,rev):
+        self.__speed += rev
+        print(f"Speed increased to {self.__speed}")
 
-    def accelerate(self):
-        pass
-
-    def brake(self):
-        pass
+    def brake(self,brk):
+        self.__speed -= brk
+        if self.__speed < 0:
+            self.__speed = 0
+        print(f"You're at {self.__speed} now.")
 
     def get_speed(self):
-        pass
+        return f"Speed:{self.__speed}"
+
+mahindra = Car(100)
+mahindra.accelerate(20)
+mahindra.brake(90)
+print(mahindra.get_speed())
