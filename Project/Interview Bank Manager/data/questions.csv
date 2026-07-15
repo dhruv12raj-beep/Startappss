@@ -1,0 +1,10 @@
+1,What is Python???,"Python is a high-level, interpreted, object-oriented programming language known for its simplicity and readability.",PYHON,EASY
+2,What is OOP?,"Object-Oriented Programming is a programming paradigm based on objects, classes, inheritance, encapsulation, polymorphism, and abstraction.",OOP,EASY
+3,What is Class?,A class is a blueprint for creating object.,OOP,EASY
+4,What is an Object?,A object is a instance of a class.,OOP,EASY
+5,What is Encapsulation?,Encapsulation is a process of binding data and mehtods into a single unit while restricting direct access.,OOP,MEDIUM
+6,What is Inhertance?,Inheritance allows one class to acquire properties and methods of another class.,OOP,EASY
+7,What is polymorphism?,Polymorphism allows the same interface to perform different behaviors depending on the object.,OOP,EASY
+8,What is Abstraction?,Abstraction hides implementation details and exposes only essential features.,OOP,MEDIUM
+9,What is Exception Handling,Exception handling manages runtime errors using try except else and finally blocks., OOP,MEDIUM
+10,What is a Metaclass?,A metaclass defines how classes are created and customized in Python.,ADVANCED PTYHON, HARD
