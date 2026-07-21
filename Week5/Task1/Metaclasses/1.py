@@ -23,9 +23,10 @@ class MyMeta(type):
 
 class Student(metaclass =MyMeta):
     name = "Dhruv"
-    age = 99
+    age = 23
 
 
 std = Student()
 
 print(std.NAME)
+print(std.AGE)

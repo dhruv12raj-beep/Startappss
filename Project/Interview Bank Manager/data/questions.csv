@@ -8,3 +8,4 @@
 8,What is Abstraction?,Abstraction hides implementation details and exposes only essential features.,OOP,MEDIUM
 9,What is Exception Handling,Exception handling manages runtime errors using try except else and finally blocks., OOP,MEDIUM
 10,What is a Metaclass?,A metaclass defines how classes are created and customized in Python.,ADVANCED PTYHON, HARD
+11,What is OOP?,oop is a programming technique used to reduce code by creating classes and objects.,OOP,EASY
