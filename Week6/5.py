@@ -1,4 +1,4 @@
-from collections import *
+from collections import defaultdict
 
 '''Count how many employees belong to each department using defaultdict.'''
 
