@@ -20,5 +20,5 @@ def sliding_window_max(nums,k):
     for i in range(nums):
 
         while window and window[0] < i-k:
-            
+            pass
 
