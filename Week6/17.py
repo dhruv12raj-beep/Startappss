@@ -42,6 +42,7 @@ lru.put(101,"pokemon")
 lru.put(102,"hobo")
 lru.put(103,"karna")
 
-lru.get(101)
-lru.put(202,"open")
+lru.put(104,"abc")
+lru.get(102)
+
 print(lru.display())

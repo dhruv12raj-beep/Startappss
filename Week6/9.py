@@ -9,9 +9,9 @@ System
 from collections import ChainMap
 
 user = {"dhruv": "employee"}
-company = {"startappss"}
+company = {"startappss": "intern"}
 system = {"python developer"}
 
 cm = ChainMap(user,company,system)
+print(cm["startappss"])
 
-print(cm)
