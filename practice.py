@@ -907,5 +907,283 @@ import asyncio
 # print(Animal.DOG == 1)
 
 
-from threading
+# import time 
 
+# def work():
+#     print("starting..")
+#     time.sleep(5)
+#     print("finished.")
+
+# work()
+# print("main program finished")
+
+# from threading import Thread
+# import time
+
+# def work():
+#     print("starting")
+#     time.sleep(5)
+#     print("finished")
+
+
+# t = Thread(target= work)
+# t.start()
+# print("main program finished")
+
+# from threading import Thread
+# import time 
+
+# def hello():
+#     print("hello")
+
+# t = Thread(target = hello)
+
+# print("before start")
+
+# t.start()
+
+# print("after start ")
+
+# from threading import Thread
+# import time
+
+# def work(number):
+#     print(f"start {number}")
+#     time.sleep(5)
+#     print(f"ends {number}")
+
+
+# for i in range(6):
+#     thread = Thread(target=work,args=(i,))
+#     thread.start()
+
+
+# print("finished main program")
+
+# from threading import Thread
+# import time
+
+# def task():
+#     print("Task Started")
+#     time.sleep(2)
+#     print("Task Finished")
+
+# t = Thread(target=task)
+
+# print("A")
+
+# t.start()
+
+# print("B")
+
+# print("C")
+
+
+# from threading import Thread
+# import time
+
+# def work():
+#     print("start")
+#     time.sleep(5)
+#     print("end")
+
+# t = Thread(target=work)
+
+# t.start()
+# t.join()
+
+# print("main function ends")
+
+# from threading import Thread
+# import time
+
+# def task(name,delay):
+#     print(f"{name} start")
+#     time.sleep(delay)
+
+# t1 = Thread(target= task,args=("A",3))
+# t2 = Thread(target= task,args=("B",1))
+# t3 = Thread(target= task,args=("C",2))
+
+# t1.start()
+# t2.start()
+# t3.start()
+
+# t3.join()
+# print("Main After C")
+
+# t1.join()
+# print("Main After A")
+
+# t2.join()
+# print('Done')
+
+
+# from threading import Thread
+# import time
+
+
+# def something():
+#     print("start")
+#     time.sleep(5)
+#     print("end")
+
+# t = Thread(target= something)
+# t.daemon = True
+# t.start()
+
+# print("program ends")
+
+
+# from threading import Thread , Lock 
+
+# l = Lock()
+# counter = 0
+
+
+# def work(n):
+#     global counter
+
+#     for _ in range(n):
+#         with l:
+#             counter+=1
+
+# t1 = Thread(target= work,args= (2000,))
+# t2= Thread(target= work,args= (1000,))
+
+# t1.start()
+# t2.start()
+
+# t1.join()
+# t2.join()
+
+# print(counter)
+
+# # print("program ends here......")
+
+# from threading import Thread, Lock 
+# import time
+
+# l = Lock()
+
+# def work(name):
+#     print(f"{name} wants lock")
+
+#     with l:
+#         print(f"{name} aquires lock")
+#         time.sleep(5)
+#         print(f"{name} releases lock")
+
+
+# t1 = Thread(target=work,args=("A"))
+# t2 = Thread(target=work,args=("B"))
+
+# t1.start()
+# t2.start()
+
+# t1.join()
+# t2.join()
+
+# print("main program ends")
+
+# ##################################################################################################################
+
+# from threading import Thread , Lock
+# import time 
+
+# lock = Lock()
+
+# def work(name):
+#     print(f"{name} waiting")
+
+#     with lock:
+#         print(f"{name}  entered")
+#         time.sleep(3)
+#         print(f"{name}  exits....")
+
+
+#     print(f"{name} finished")
+
+
+# t1 = Thread(target=work, args = ("A"))
+# t2 = Thread(target=work, args = ("B"))
+
+# t1.start()
+# time.sleep(0.5)
+# t2.start()
+
+# t1.join()
+# t2.join()
+
+# #a waiting
+# # A entered 
+# # b waiting 
+# # b entered
+# # 
+
+
+# from threading import RLock , Lock
+
+# lock = RLock()
+
+# def outer():
+#     with lock:
+#         print("A1")
+#         inner()
+#         print("A2")
+
+# def inner():
+#     with lock:
+#         print("inner function")
+
+# outer()
+
+
+# from threading import Thread, Semaphore
+# import time
+
+# sem = Semaphore(2)
+
+# def task(name):
+#     print(f"{name} waiting")
+
+#     with sem:
+#         print(f"{name} entered")
+#         time.sleep(10)
+#         print(f"{name} leaving")
+
+# for i in range(2):
+#     Thread(target=task, args=(f"T{i}",)).start()
+
+
+# from concurrent.futures import ThreadPoolExecutor
+# import time 
+
+# nums = [1,2,3,4,5,6]
+
+# def square(n):
+#     time.sleep(2)
+#     return n*n
+
+
+# with ThreadPoolExecutor(max_workers=4) as executor:
+
+#     t1 = executor.map(square, nums)
+
+# print(list(t1))
+
+
+from concurrent.futures import ThreadPoolExecutor
+import time 
+
+def task(name, sec):
+    print(f"{name} started")
+    time.sleep(sec)
+    print(f"{name} ends")
+
+
+with ThreadPoolExecutor(max_workers=2) as executor:
+    executor.submit(task,"A",3)
+    executor.submit(task,"B",1)
+    executor.submit(task,"C",2)
+    
