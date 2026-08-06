@@ -1,4 +1,4 @@
-from collections import *
+# from collections import *
 
 # text = "banana"
 # c= Counter(text)
@@ -680,7 +680,7 @@ from dataclasses import dataclass , field , asdict, replace
 
 
 
-import asyncio 
+# import asyncio 
 
 # async def main():
 #     print("starting....")
@@ -1173,17 +1173,229 @@ import asyncio
 # print(list(t1))
 
 
-from concurrent.futures import ThreadPoolExecutor
-import time 
+# from concurrent.futures import ThreadPoolExecutor
+# import time 
 
-def task(name, sec):
-    print(f"{name} started")
-    time.sleep(sec)
-    print(f"{name} ends")
+# def task(name, sec):
+#     print(f"{name} started")
+#     time.sleep(sec)
+#     print(f"{name} ends")
 
 
-with ThreadPoolExecutor(max_workers=2) as executor:
-    executor.submit(task,"A",3)
-    executor.submit(task,"B",1)
-    executor.submit(task,"C",2)
+# with ThreadPoolExecutor(max_workers=2) as executor:
+#     executor.submit(task,"A",3)
+#     executor.submit(task,"B",1)
+#     executor.submit(task,"C",2)    
+
+
+# from threading import Thread
+# from queue import Queue
+# import time 
+
+# q= Queue()
+
+
+# def producer():
+#     for i in range(5):
+#         q.put(i)
+#         time.sleep(1)
+
+# def consumer():
+#     while True:
+#         item = q.get()
+#         print(f"consumed {item}")
+#         q.task_done()
+
+# Thread(target= producer).start()
+# Thread(target= consumer, daemon=True).start()
+
+# q.join()
+
+# print("main program finishes")
+# print("main program finishes")
+
+
+
+# from queue import Queue
+
+# q = Queue()
+
+# q.put(1)
+# q.put(2)
+# q.put(3)
+
+# print(q.get())
+# print(q.get())
+
+# q.put(4)
+
+# print(q.get())
+# print(q.get())
+
+# from multiprocessing import Process
+
+# x = 10
+
+# def task():
+#     global x
+#     x = 20
+#     print("Child:", x)
+
+# if __name__ == "__main__":
+#     p = Process(target=task)
+
+#     p.start()
+#     p.join()
+
+#     print("Parent:", x)
+
+
+
+# from concurrent.futures import ProcessPoolExecutor
+
+# nums = [i for i in range(1,21)]
+
+# def factorial(n):
+#     result = 1
+#     for i in range(2,n+1):
+#         result *= i
+
+#     return result
+
+# if __name__ == "__main__":
     
+#     with ProcessPoolExecutor(max_workers=2) as executors:
+#         print(list(executors.map(factorial,nums)))
+
+
+
+# def hello():
+#     print("Hello")
+
+# x = hello()
+
+# print(x)
+# hello()
+
+# def greet():
+#     print("Hi")
+
+
+# def deco(func):
+
+#     def wrapper():
+#         print("1")
+#         func()
+#         print("2")
+
+#     return wrapper
+
+
+# greet = deco(greet)
+
+# greet()
+
+# def deco(func):
+#     def wrapper():
+#         print("Before")
+#         func()
+#         print("After")
+#     return wrapper
+
+
+# @deco
+# def greet():
+#     print("Hi")
+
+# greet()
+
+# def upper(func):
+#     def wrapper():
+#         print("UPPER")
+#         func()
+#     return wrapper
+
+
+# def star(func):
+#     def wrapper():
+#         print("***")
+#         func()
+#     return wrapper
+
+
+# @upper
+# @star
+# def show():
+#     print("Python")
+
+# show()
+
+# def decorator(func):
+
+#     def wrapper(*Args , **kwargs):
+       
+#         result  = func(*Args ,**kwargs)
+        
+
+#         return result
+
+#     return wrapper
+
+# @decorator
+# def add(name,role):
+#     return name,role 
+
+ 
+# print(add(name = 'dhruv', role= "python developer"))
+    
+
+# import time 
+
+# def decorator(func):
+
+#     def wrapper(*args, **kwargs):
+#         start = time.perf_counter()
+
+#         result = func(*args, **kwargs)
+
+#         end = time.perf_counter()
+
+#         print(f"execution time {end - start :.4f}s ")
+
+#         return result
+
+#     return wrapper
+
+# @decorator
+# def sum(n):
+#     result = 0
+#     for i in range(1,n+1):
+#         result+=i
+#     return result
+
+# print(sum(100098900))    
+
+
+# from functools import wraps
+
+# def deco(func):
+
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         print("Before")
+#         return func(*args, **kwargs)
+
+#     return wrapper
+
+
+# @deco
+# def greet():
+#     """Greets the user"""
+#     print("Hello")
+
+# print(greet.__name__)
+
+# print(greet.__doc__)
+
+# greet()
+
