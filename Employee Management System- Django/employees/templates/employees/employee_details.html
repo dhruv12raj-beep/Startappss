@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'employees/style.css' %}">
+</head>
+
+<body>
+
+    <div class="employee-card">
+
+        <h1>{{ employee.name }}</h1>
+
+        <p>Department: {{ employee.department }}</p>
+        <p>Branch: {{ employee.branch }}</p>
+        <p>City: {{ employee.city }}</p>
+        <p>Phone Number: {{ employee.phone_number }}</p>
+
+    </div>
+
+</body>
+</html>

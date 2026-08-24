@@ -1,0 +1,15 @@
+.employee-card {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.employee-card h1 {
+    margin-bottom: 20px;
+}
+
+.employee-card p {
+    margin: 10px 0;
+}

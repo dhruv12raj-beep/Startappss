@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employees</title>
+
+    <link rel="stylesheet" href="{% static 'employees/employees_home_page.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="navbar-brand">
+            Employee Management
+        </div>
+
+        <div class="navbar-links">
+            <a href="{% url 'employees' %}">Employees</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <h1>Our Employees</h1>
+
+        <div class="employee-grid">
+
+            {% for employee in employees %}
+
+                <div class="employee-card">
+
+                    <h2>{{ employee.name }}</h2>
+
+                    <p>
+                        <strong>Department:</strong>
+                        {{ employee.department }}
+                    </p>
+
+                    <p>
+                        <strong>Branch:</strong>
+                        {{ employee.branch }}
+                    </p>
+
+                    <p>
+                        <strong>City:</strong>
+                        {{ employee.city }}
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        {{ employee.email }}
+                    </p>
+
+                    <a
+                        href="{% url 'employee_detail' employee.id %}"
+                        class="details-button"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            {% empty %}
+
+                <p class="empty-message">
+                    No employees found.
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
