@@ -1399,3 +1399,67 @@ from dataclasses import dataclass , field , asdict, replace
 
 # greet()
 
+# def add_item(item , items= []):
+#     items.append(item)
+#     return items
+
+# print(add_item(1))
+# print(add_item(2))
+# print(add_item(3))
+
+
+# def outer():
+#     x = 10
+
+#     def inner():
+#         print(x)
+
+#     return inner
+
+
+# func = outer()
+# func()
+
+# def counter():
+#     count = 0
+
+#     def increment():
+#         nonlocal count
+#         count += 1
+#         return count
+
+#     return increment
+
+
+# c = counter()
+
+# print(c())
+# print(c())
+# print(c())
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# a = [item for row in matrix for item in row]
+# print(a)
+# def get_user():
+#     try:
+#         data = int("abc")
+#     except ValueError as e:
+#         raise RuntimeError("Failed to get user") from e
+
+
+# get_user()
+
+
+# from collections import Counter
+
+# items = ["python", "sql", "python", "fastapi", "python", "sql"]
+
+# count = Counter(items)
+
+# print(count["python"])
+# print(count.most_common(2))

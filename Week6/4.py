@@ -11,9 +11,9 @@ from collections import defaultdict
 
 names = [("rahul","IT"),("Aman","HR"),("Rohit", "IT")]
 
-grouped_data =  defaultdict(list)
+grouped_data =  defaultdict(set)
 
 for std, dept in names:
-    grouped_data[dept].append(std)
+    grouped_data[dept].add(std)
 
 print(grouped_data)
